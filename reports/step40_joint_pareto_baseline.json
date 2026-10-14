@@ -1,0 +1,512 @@
+{
+  "base_cfg": {
+    "seed": 1,
+    "ncores": 4,
+    "epochs": 8,
+    "events_per_core_per_epoch": 64,
+    "card_space": 64,
+    "zipf_s": 1.07,
+    "phase_shift": 7
+  },
+  "workload_modes": [
+    "shared_hot_shift",
+    "per_core_partition"
+  ],
+  "global_share_p": 0.1,
+  "weights": {
+    "w_cycle": 1.0,
+    "w_stall": 10.0,
+    "w_replace": 200.0
+  },
+  "top": [
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 77.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 2,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 79.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 2
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 85.0
+    },
+    {
+      "scan": {
+        "cardset_size": 16,
+        "fifo_depth": 1,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 85.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 2,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 2
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 87.0
+    },
+    {
+      "scan": {
+        "cardset_size": 16,
+        "fifo_depth": 2,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 87.0
+    },
+    {
+      "scan": {
+        "cardset_size": 16,
+        "fifo_depth": 1,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 2
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 93.0
+    },
+    {
+      "scan": {
+        "cardset_size": 16,
+        "fifo_depth": 2,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 2
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 95.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 32,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 141.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 2,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 32,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 143.0
+    }
+  ],
+  "pareto_front": [
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 2,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 2176.0,
+          "cycle": 2176,
+          "stall_in": 0,
+          "replace": 0
+        }
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 2176.0,
+      "cost": 77.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 4,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 8,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 31984.0,
+          "cycle": 2304,
+          "stall_in": 1008,
+          "replace": 98
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 66784.0,
+          "cycle": 2304,
+          "stall_in": 1008,
+          "replace": 272
+        }
+      },
+      "worst_mode": "per_core_partition",
+      "worst_score": 66784.0,
+      "cost": 45.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 4,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 16,
+        "ways": 1,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 82384.0,
+          "cycle": 2304,
+          "stall_in": 1008,
+          "replace": 350
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 156784.0,
+          "cycle": 2304,
+          "stall_in": 1008,
+          "replace": 722
+        }
+      },
+      "worst_mode": "per_core_partition",
+      "worst_score": 156784.0,
+      "cost": 29.0
+    },
+    {
+      "scan": {
+        "cardset_size": 8,
+        "fifo_depth": 1,
+        "consume_every": 4,
+        "batch_size": 2
+      },
+      "sweep": {
+        "sets": 8,
+        "ways": 1,
+        "index_mode": 0
+      },
+      "per_mode": {
+        "shared_hot_shift": {
+          "workload_mode": "shared_hot_shift",
+          "score": 123384.0,
+          "cycle": 2304,
+          "stall_in": 1008,
+          "replace": 555
+        },
+        "per_core_partition": {
+          "workload_mode": "per_core_partition",
+          "score": 180984.0,
+          "cycle": 2304,
+          "stall_in": 1008,
+          "replace": 843
+        }
+      },
+      "worst_mode": "per_core_partition",
+      "worst_score": 180984.0,
+      "cost": 21.0
+    }
+  ],
+  "knee_method": "near_best_cheapest(eps=0.02)",
+  "knee": {
+    "scan": {
+      "cardset_size": 8,
+      "fifo_depth": 1,
+      "consume_every": 2,
+      "batch_size": 2
+    },
+    "sweep": {
+      "sets": 16,
+      "ways": 4,
+      "index_mode": 0
+    },
+    "per_mode": {
+      "shared_hot_shift": {
+        "workload_mode": "shared_hot_shift",
+        "score": 2176.0,
+        "cycle": 2176,
+        "stall_in": 0,
+        "replace": 0
+      },
+      "per_core_partition": {
+        "workload_mode": "per_core_partition",
+        "score": 2176.0,
+        "cycle": 2176,
+        "stall_in": 0,
+        "replace": 0
+      }
+    },
+    "worst_mode": "shared_hot_shift",
+    "worst_score": 2176.0,
+    "cost": 77.0
+  },
+  "summary": {
+    "n_total": 96,
+    "n_front": 4,
+    "best_worst_score": 2176.0,
+    "min_cost_on_front": 21.0
+  }
+}

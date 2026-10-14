@@ -1,0 +1,6 @@
+lane_count,theoretical_evt_per_cycle,effective_evt_per_cycle,bank_conflict_loss_pct,estimated_gates,estimated_power_mw,fmax_risk,verification_tests,commit_queue_type,recommendation,profile
+1,1.0,1.0,0,60000,1.70,low,6,bypass,go,standard
+2,2.0,1.75,12.5,95000,2.80,moderate,16,2push_2pop,go,server_gateway
+3,3.0,2.17,27.7,140000,4.20,high,23,3push_3pop,nogo,none
+4,4.0,2.68,33.0,170000,5.00,high,28,4push_4pop,hold,research_only
+8,8.0,3.59,55.1,340000,10.00,very_high,55,8push_8pop,nogo,none

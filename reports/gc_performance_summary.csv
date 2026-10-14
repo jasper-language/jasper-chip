@@ -1,0 +1,16 @@
+test,profile,cpi,ipc,stall,wb_zero,rb_nonblock,gc_nostall
+alu_200x,lite,1.03,0.97,0,yes,yes,yes
+store_nonheap,lite,1.02,0.98,0,yes,yes,yes
+store_heap_wb,lite,1.02,0.98,0,yes,yes,yes
+load_200x,lite,1.00,1.00,0,yes,yes,yes
+gc_new,lite,1.00,1.00,0,yes,yes,yes
+alu_200x,standard,1.03,0.97,0,yes,yes,yes
+store_nonheap,standard,1.02,0.98,0,yes,yes,yes
+store_heap_wb,standard,1.02,0.98,0,yes,yes,yes
+load_200x,standard,1.00,1.00,0,yes,yes,yes
+gc_new,standard,1.00,1.00,0,yes,yes,yes
+alu_200x,server,1.03,0.97,0,yes,yes,yes
+store_nonheap,server,1.02,0.98,0,yes,yes,yes
+store_heap_wb,server,1.02,0.98,0,yes,yes,yes
+load_200x,server,1.00,1.00,0,yes,yes,yes
+gc_new,server,1.00,1.00,0,yes,yes,yes

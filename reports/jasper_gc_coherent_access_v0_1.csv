@@ -1,0 +1,20 @@
+Test File,Test Name,Status,Gate,Notes
+tests/test_jasper_gc_coherent_access.py,test_elab,PASS,V0_1_GATE,Module elaborates
+tests/test_jasper_gc_coherent_access.py,test_read_hit,PASS,V0_1_GATE,Coherent hit read
+tests/test_jasper_gc_coherent_access.py,test_read_miss,PASS,V0_1_GATE,Coherent miss read
+tests/test_jasper_gc_coherent_access.py,test_write,PASS,V0_1_GATE,Write enable OK
+tests/test_jasper_gc_coherent_access.py,test_write_disabled_unsupported,PASS,V0_1_GATE,Write disabled UNSUPPORTED
+tests/test_jasper_gc_coherent_access.py,test_request_backpressure_queue_full,PASS,V0_1_GATE,Request backpressure
+tests/test_jasper_gc_coherent_access.py,test_response_backpressure_hold,PASS,V0_1_GATE,Response hold
+tests/test_jasper_gc_coherent_access.py,test_response_data_stable,PASS,V0_1_GATE,Data stable under backpressure
+tests/test_jasper_gc_coherent_access.py,test_response_tag_stable,PASS,V0_1_GATE,Tag stable under backpressure
+tests/test_jasper_gc_coherent_access.py,test_read_tag_epoch,PASS,V0_1_GATE,Read preserves tag/epoch
+tests/test_jasper_gc_coherent_access.py,test_write_tag_epoch,PASS,V0_1_GATE,Write preserves tag/epoch
+tests/test_jasper_gc_coherent_access.py,test_accepted_equals_response,PASS,V0_1_GATE,No-loss tag equality
+tests/test_jasper_gc_coherent_access.py,test_no_missing_response,PASS,V0_1_GATE,No missing tags
+tests/test_jasper_gc_coherent_access.py,test_no_duplicate_response,PASS,V0_1_GATE,No duplicate tags
+tests/test_jasper_gc_coherent_access.py,test_mixed_read_write_sequence,PASS,V0_1_GATE,Interleaved R/W
+tests/test_jasper_gc_coherent_access.py,test_hit_miss_report,PASS,V0_1_GATE,Correct rsp_hit across mask
+tests/test_jasper_gc_coherent_access.py,test_fault_injection,PASS,V0_1_GATE,FAULT on fault_tag
+tests/test_jasper_gc_coherent_access.py,test_unsupported_status,PASS,V0_1_GATE,UNSUPPORTED status
+tests/test_jasper_gc_coherent_access.py,test_read_after_write_sequence,PASS,V0_1_GATE,Write-then-read sequence

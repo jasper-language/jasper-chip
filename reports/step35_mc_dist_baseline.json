@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "step": 35,
+    "seed": 20260102,
+    "ver": 1
+  },
+  "baseline_cfg": {
+    "seed": 20260102,
+    "ncores": 4,
+    "epochs": 2,
+    "events_per_core_per_epoch": 96,
+    "card_space": 64,
+    "zipf_s": 1.1,
+    "phase_shift": 9,
+    "scan_cardset_size": 16,
+    "scan_fifo_depth": 2,
+    "scan_consume_every": 4,
+    "scan_batch_size": 2,
+    "sweep_sets": 8,
+    "sweep_ways": 2,
+    "sweep_index_mode": 1
+  },
+  "shared_hot_shift": {
+    "cycle": 832,
+    "scan": {
+      "in": 768,
+      "uniq": 395,
+      "dup": 31,
+      "stall": 342,
+      "out": 395,
+      "per_core_out": [
+        98,
+        99,
+        99,
+        99
+      ]
+    },
+    "sweep": {
+      "mark": 176,
+      "dup_drop": 219,
+      "hit": 219,
+      "miss": 176,
+      "replace": 144,
+      "per_core_mark": [
+        44,
+        43,
+        47,
+        42
+      ]
+    },
+    "card_dist": {
+      "per_core_unique": [
+        51,
+        48,
+        50,
+        49
+      ],
+      "union_unique": 63,
+      "shared_unique": 56,
+      "shared_ratio": 0.8888888888888888,
+      "avg_jaccard": 0.7119575433811492
+    },
+    "workload": {
+      "mode": "shared_hot_shift",
+      "global_share_p": 0.1
+    }
+  },
+  "per_core_partition": {
+    "cycle": 832,
+    "scan": {
+      "in": 768,
+      "uniq": 395,
+      "dup": 57,
+      "stall": 316,
+      "out": 395,
+      "per_core_out": [
+        99,
+        99,
+        98,
+        99
+      ]
+    },
+    "sweep": {
+      "mark": 259,
+      "dup_drop": 136,
+      "hit": 136,
+      "miss": 259,
+      "replace": 227,
+      "per_core_mark": [
+        63,
+        65,
+        63,
+        68
+      ]
+    },
+    "card_dist": {
+      "per_core_unique": [
+        34,
+        34,
+        38,
+        33
+      ],
+      "union_unique": 64,
+      "shared_unique": 53,
+      "shared_ratio": 0.828125,
+      "avg_jaccard": 0.3261206306780953
+    },
+    "workload": {
+      "mode": "per_core_partition",
+      "global_share_p": 0.1
+    }
+  }
+}

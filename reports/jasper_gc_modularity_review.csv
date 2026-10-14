@@ -1,0 +1,30 @@
+Layer,Module,Responsibility,Cohesion,Status,CriticalIssues
+Config (NEW),jasper_gc_config.py,Config parameters + validation + profile presets,5,PASS,None
+Config (OLD),gc_config.py,Legacy GC config dataclasses,3,WARNING,"Naming collision with jasper_gc_config.py; dead code GCTopologyConfig"
+Config (OLD),gc_config.py PROFILES,Legacy profile presets,3,WARNING,Overlaps with BackendProfile; dual maintenance
+Top,jasper_gc_ip.py,Top-level module instantiation and wiring,2,FAIL,"3 inconsistent wiring paths; fill_ready stubs; profile_id leakage; unplumbed power policies"
+Top,_wire_1L_backend,1L backend wiring (ep+ft+meta+merge),2,FAIL,Hardcodes sub-module params; different abstraction from 2L/cluster
+Top,_wire_2L_tile,2L tile wiring,3,WARNING,Hardcodes OrderedGlobalMerge domain_count=1 queue_depth=4
+Top,_wire_cluster,Multi-tile cluster wiring,3,WARNING,Policies not plumbed; no power management
+Backend,BackendLane,Single lane pipeline (pipe+meta+ft+merge),4,WARNING,Hardcodes cache_size=1024 ways=2 entries_per_bank=8
+Backend,BackendTile,Lane composition,4,PASS,Thin wrapper over lanes
+Backend,BackendMergeMulti,Multi-output merge (unused),2,WARNING,390 lines dead code
+Backend,BackendMergeSingle,Single-entry merge,4,PASS,Simple; used by 1L path
+Backend,GCEventPipelineStandard,Event pipeline standard variant,4,PASS,"EVT_SCAN/SWEEP/MOVE constants duplicated with gc_backend_event.py"
+Backend,GCEventPipelineSeparated,Event pipeline separated variant,4,PASS,Same constant duplication
+Backend,MetadataCachePipelined,Pipelined metadata cache,5,PASS,GCBackendEventRecord unused decoration
+Backend,ForwardingTableBankedPipeline,Banked forwarding table,4,PASS,GCBackendEventRecord unused decoration
+Backend,ForwardingTableStandard,Standard forwarding table,4,PASS,Simple; used by tests
+Backend,GCBackendEventRecord,Event record type,3,MEDIUM,Imported but functionally unused in multiple modules
+Fabric,OrderedGlobalMerge,Per-domain ordered merge,4,PASS,Parameterized; duplicates OrderedMerge
+Fabric,OrderedMerge (cluster),Simple round-robin merge,3,WARNING,~70% overlap with OrderedGlobalMerge
+Fabric,HybridDispatch,5-policy dispatch (unused),4,HIGH,107 lines dead code; config policies have zero RTL effect
+Fabric,BackendDispatcher,Simple addr-hash dispatch,3,HIGH,No policy support; ignores config dispatch_policy
+Fabric,SkidBuffer,Per-tile skid buffer,4,MEDIUM,Exists but never instantiated
+Fabric,IdleDetect,Idle timeout detection,5,HIGH,Exists but never instantiated; config power_policy ignored
+Fabric,ClockGate,Behavioral clock gate,3,HIGH,Exists but never instantiated; config enable_clock_gating ignored
+Fabric,LoadBasedEnable,Load-based tile enable,4,HIGH,Exists but never instantiated; tile_active not connected
+Fabric,FabricCoordinator,Power gating coordination,4,HIGH,Exists but never instantiated
+Fabric,GCMultiBackendCluster,Multi-tile cluster,3,FAIL,"Ignores config dispatch/merge/backpressure policies; always uses simple dispatch"
+External Interface,gc_ext Record,External accelerator placeholder,5,PASS,Guarded by enable_external_gc_interface default False
+External Interface,docs/jasper_gc_external_interface.md,External interface documentation,5,PASS,States placeholder; no functional impact

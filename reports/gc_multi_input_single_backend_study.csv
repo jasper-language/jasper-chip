@@ -1,0 +1,6 @@
+config,input_width,output_width,backend_count,metadata_ports,forwarding_ports,merge_ports,theoretical_evt_per_cycle,effective_evt_per_cycle,first_bottleneck,gates_estimate,power_mw_10pct,area_delta_pct,power_delta_pct,verification_risk,fmax_risk,recommendation
+current_1lane,1,1,1,1,1,1,1.0,1.0,none,60000,1.7,0,0,low,low,standard_baseline
+wide_2lane,2,2,1,2,2,2,2.0,1.8,metadata_bank_conflict,95000,2.8,+58,+65,moderate,moderate,hold
+wide_4lane,4,4,1,4,4,4,4.0,3.0,bank_conflict+decoder,170000,5.0,+183,+194,high,high,hold
+multi_2x,1,1,2,1,1,2,2.0,2.0,none,125000,3.6,+108,+112,moderate,low,go
+multi_4x,1,1,4,1,1,4,4.0,4.0,none,250000,7.2,+317,+324,moderate,low,go

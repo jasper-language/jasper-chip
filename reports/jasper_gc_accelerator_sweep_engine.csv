@@ -1,0 +1,12 @@
+Status,Component,File,Profile,Tests,Notes
+RTL_PASS,SweepEngine,rtl/jasper_gc_sweep_engine.py,all,10,"Minimal counting sweep; no real free-list"
+RTL_PASS,SweepEngine integration,rtl/jasper_gc_accelerator_ip.py,all,7,"SWEEP→SweepEngine, SCAN→ScanEngine, dual-path"
+RTL_PASS,ScanEngine,rtl/jasper_gc_scan_engine.py,all,8,"Counting scan; no real heap layout"
+RTL_PASS,Completion arbitration,rtl/jasper_gc_accelerator_ip.py,all,,"sched.reject > sweep > scan > unhandled"
+PASS,SweepEngine unit,tests/test_jasper_gc_sweep_engine.py,all,10,"10/10 PASS"
+PASS,Sweep integration,tests/test_jasper_gc_accelerator_sweep_integration.py,all,7,"7/7 PASS"
+HOLD,CompactEngine,not implemented,all,0,"Not implemented"
+HOLD,MetadataRebuildEngine,not implemented,all,0,"Not implemented"
+FUTURE_BOUNDARY,CXL adapter,not implemented,all,0,"Future server memory pool"
+FUTURE_BOUNDARY,DPU adapter,not implemented,all,0,"Future gateway"
+FUTURE_BOUNDARY,PCIe adapter,not implemented,all,0,"Future background batch"

@@ -1,0 +1,18 @@
+Test File,Test Name,Status,Gate,Notes
+tests/test_jasper_gc_coherent_access_adapter.py,test_elab,PASS,V0_1_GATE,Adapter elaborates
+tests/test_jasper_gc_coherent_access_adapter.py,test_read_hit,PASS,V0_1_GATE,Read hit via adapter
+tests/test_jasper_gc_coherent_access_adapter.py,test_read_miss,PASS,V0_1_GATE,Read miss via adapter
+tests/test_jasper_gc_coherent_access_adapter.py,test_write,PASS,V0_1_GATE,Write via adapter
+tests/test_jasper_gc_coherent_access_adapter.py,test_write_disabled_unsupported,PASS,V0_1_GATE,UNSUPPORTED via dbg
+tests/test_jasper_gc_coherent_access_adapter.py,test_tag_16bit_preserved,PASS,V0_1_GATE,16-bit tag end-to-end
+tests/test_jasper_gc_coherent_access_adapter.py,test_response_backpressure_hold,PASS,V0_1_GATE,Response hold
+tests/test_jasper_gc_coherent_access_adapter.py,test_request_backpressure,PASS,V0_1_GATE,Request backpressure
+tests/test_jasper_gc_coherent_access_adapter.py,test_response_backpressure_hold_data_stable,PASS,V0_1_GATE,Data stable under hold
+tests/test_jasper_gc_coherent_access_adapter.py,test_no_loss,PASS,V0_1_GATE,No-loss tag equality
+tests/test_jasper_gc_coherent_access_adapter.py,test_no_missing_response,PASS,V0_1_GATE,No missing tags
+tests/test_jasper_gc_coherent_access_adapter.py,test_no_duplicate_response,PASS,V0_1_GATE,No duplicate tags
+tests/test_jasper_gc_coherent_access_adapter.py,test_fault_status_on_dbg,PASS,V0_1_GATE,FAULT on dbg_rsp_status
+tests/test_jasper_gc_coherent_access_adapter.py,test_dbg_rsp_error_follows_status,PASS,V0_1_GATE,Error follows status
+tests/test_jasper_gc_coherent_access_adapter.py,test_dbg_rsp_hit_reports,PASS,V0_1_GATE,Hit/miss on dbg
+tests/test_jasper_gc_coherent_access_adapter.py,test_dbg_rsp_epoch_passthrough,PASS,V0_1_GATE,Epoch passthrough
+tests/test_jasper_gc_coherent_access_adapter.py,test_mixed_read_write_sequence,PASS,V0_1_GATE,Interleaved R/W

@@ -1,0 +1,9 @@
+Category,Test,Status,Tests
+CompactEngine,counting_mode,PASS,10
+CompactEngine,memory_mode_completes,PASS,1
+CompactEngine,memory_region_base,PASS,1
+Arbiter4,compact_wins,PASS,1
+Arbiter4,outstanding_blocks_all,PASS,1
+Top4,compact_memory,PASS,1
+Top4,four_engines_memory,PASS,1
+Top4,compact_counting,PASS,1

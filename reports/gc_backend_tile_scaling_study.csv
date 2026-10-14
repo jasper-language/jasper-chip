@@ -1,0 +1,10 @@
+config,lane_per_tile,tile_count,total_lanes,total_evt_per_cycle,estimated_gates,estimated_power_mw,ge_per_evt,mw_per_evt,area_delta_vs_1Ln,fmax_risk,verification_risk,bank_conflict_risk,dispatch_complexity,merge_complexity,ordering_complexity,backpressure_complexity,cluster_affinity_fit,recommended_profile
+1Lx1,1,1,1,1.0,60000,1.70,60000,1.70,0,low,low,none,simple,none,none,simple,per_core,mcu_mobile
+1Lx2,1,2,2,2.0,125000,3.60,62500,1.80,0,low,moderate,none,simple,gather_order,per_domain,simple,2_core,gateway_normal
+1Lx4,1,4,4,4.0,250000,7.20,62500,1.80,0,low,moderate,none,simple,gather_order,per_domain,simple,4_core,gateway_heavy
+1Lx8,1,8,8,8.0,500000,14.40,62500,1.80,0,low,moderate,none,simple,gather_order,per_domain,simple,8_core,gateway_extreme
+2Lx1,2,1,2,2.0,95000,2.80,47500,1.40,-24,moderate,hard,moderate_25pct,per_lane_hash,commit_queue,queue,per_lane_skid,per_core_wide,server_gc20
+2Lx2,2,2,4,4.0,190000,5.60,47500,1.40,-24,moderate,harder,moderate_25pct,dual_level,dual_level,dual_level,dual_level,2_core_wide,server_gc40
+2Lx4,2,4,8,8.0,380000,11.20,47500,1.40,-24,moderate,hardest,moderate_25pct,dual_level,dual_level,dual_level,dual_level,4_core_wide,server_gc80
+4Lx1,4,1,4,4.0,170000,5.00,42500,1.25,-32,high,very_hard,high_50pct,quad_hash,complex_queue,complex_queue,quad_skid,per_core_very_wide,server_gc40_alt
+4Lx2,4,2,8,8.0,340000,10.00,42500,1.25,-32,high,very_hard,high_50pct,dual_level,dual_level,very_complex,dual_level,2_core_very_wide,server_gc80_alt

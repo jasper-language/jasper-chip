@@ -1,0 +1,15 @@
+Dimension,Current,Limitation,Next
+CommandQueue,depth=8,Pipeline depth,Parameterize
+CompletionQueue,depth=8,Single queue bottleneck,Per-engine queues
+RegionScheduler,region_count=4,Sufficient,Parameterize
+ScanEngine,1 instance,Single-threaded,Multi-instance
+SweepEngine,1 instance,Single-threaded,Multi-instance
+MRE,1 instance,Single-threaded,Multi-instance
+CompactEngine,1 instance,Single-threaded,Multi-instance
+Engine model,Counting/model,No real heap,MemoryAccess
+Arbitration,Single-output,Serializes completions,Wider pipeline
+Command issue,Single-output,Serializes commands,Multi-issue
+Memory access,None,No latency model,MemoryAccess
+Chiplet link,Not modeled,No bandwidth,Adapter model
+Coherent access,Not modeled,No coherence,CoherentAccess
+Throughput,Not measured,No perf data,Counters

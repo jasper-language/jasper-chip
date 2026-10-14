@@ -1,0 +1,64 @@
+# ---------- 构建产物（可再生，且内嵌绝对路径） ----------
+build/
+*.il
+*.v
+*.ys.out
+*_yosys.log
+*_ltp.log
+
+# ---------- 仿真波形与运行痕迹 ----------
+*.vcd
+*.fst
+*.ghw
+*.lxt2
+*.wlf
+logs/
+traces/
+*.log
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+dist/
+
+# ---------- 虚拟环境 ----------
+.venv/
+venv/
+env/
+
+# ---------- 本地私有留存（不发布） ----------
+_holdback/
+
+# ---------- 本地产物 / 私有 ----------
+third_party_wheels/
+*.whl
+reports/_tmp_*
+scripts/auto_push_cpu.sh
+scripts/install_auto_push_cron.sh
+
+# ---------- 凭据（预防性） ----------
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.crt
+id_rsa*
+.netrc
+.pypirc
+.npmrc
+
+# ---------- OS / 编辑器 ----------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

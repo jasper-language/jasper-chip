@@ -1,0 +1,63 @@
+from amaranth import *
+
+from .isa_module import ISAExtension
+from .isa import SYSTEM
+
+
+class Svinval(ISAExtension):
+    def __init__(self, xlen=32):
+        super().__init__(xlen=xlen, name="svinval")
+
+    def elaborate(self, platform):
+        m = Module()
+
+        is_sinval_vma = ((self.opcode == SYSTEM) &
+                         (self.funct3 == 0) &
+                         (self.funct7 == 0b0001011) &
+                         (self.rd == 0))
+        is_sfence_w_inval = ((self.opcode == SYSTEM) &
+                             (self.funct3 == 0) &
+                             (self.imm[0:12] == 0x180) &
+                             (self.rs1 == 0) &
+                             (self.rs2 == 0) &
+                             (self.rd == 0))
+        is_sfence_inval_ir = ((self.opcode == SYSTEM) &
+                              (self.funct3 == 0) &
+                              (self.imm[0:12] == 0x181) &
+                              (self.rs1 == 0) &
+                              (self.rd == 0))
+        is_inval = is_sinval_vma | is_sfence_w_inval | is_sfence_inval_ir
+
+        m.d.comb += self.matched.eq(self.valid & is_inval)
+
+        m.d.comb += [
+            self.is_fence.eq(is_inval),
+            self.wb_en.eq(0),
+            self.wb_data.eq(0),
+            self.alu_out.eq(0),
+            self.mem_addr.eq(0),
+            self.mem_wdata.eq(0),
+            self.redirect.eq(0),
+            self.redirect_pc.eq(0),
+            self.trap.eq(0),
+            self.br_valid.eq(0),
+            self.br_pc.eq(0),
+            self.br_target.eq(0),
+            self.br_taken.eq(0),
+            self.br_is_branch.eq(0),
+            self.br_is_jal.eq(0),
+            self.br_is_jalr.eq(0),
+            self.is_load.eq(0),
+            self.is_store.eq(0),
+            self.is_branch.eq(0),
+            self.is_jal.eq(0),
+            self.is_jalr.eq(0),
+            self.is_gc.eq(0),
+            self.gc_op.eq(0),
+            self.gc_rd.eq(0),
+            self.gc_rs1.eq(0),
+            self.gc_rs2.eq(0),
+            self.gc_is_reloc.eq(0),
+        ]
+
+        return m

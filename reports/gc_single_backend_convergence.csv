@@ -1,0 +1,17 @@
+section,key,value
+latency,N8_hit_latency,7
+latency,N4_hit_latency,3
+latency,N8_throughput,1.000
+latency,N4_throughput,1.000
+timing,GCSubsystem,risk=B gates=3500
+timing,MetadataCachePipelined,risk=B gates=1800
+timing,ForwardingTableBanked(bk=1),risk=B gates=1200
+timing,GCEventPipelineSeparated,risk=A gates=500
+timing,BackendMergeSingle,risk=A gates=200
+power,Idle,0.175mW CG=90%
+power,5% GC,0.873mW CG=0%
+power,10% GC,1.745mW CG=0%
+power,20% GC,3.054mW CG=0%
+test,full_integration,pass=4 fail=0
+test,stress,pass=999 fail=0
+test,gateway_rtl,pass=0 fail=999

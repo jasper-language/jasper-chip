@@ -1,0 +1,41 @@
+{
+  "evidence_commits": [
+    "1f3e7ca",
+    "88c91f4",
+    "5a91bd7",
+    "b24adb1",
+    "209f776",
+    "cbcac34",
+    "b46e403",
+    "6d8ac95",
+    "99ed4ae",
+    "5f469b0",
+    "60244bc",
+    "b9a2ff8",
+    "82ac0c5"
+  ],
+  "evidence_node_count": 15,
+  "gc_config_total": 33,
+  "missing_commits": [],
+  "missing_markers": {},
+  "missing_nodes": {},
+  "q_test_file_count": 10,
+  "resource_replacements": {
+    "RV32 branch aggregate": "BranchCondition exhaustive evidence",
+    "RV32A aggregate": "RV32/RV64 AMO and LR/SC partitioned evidence",
+    "RV32C single core": "C execution evidence plus control-module partitions",
+    "RV32I+GC+* monolithic": "partitioned extension/configuration evidence",
+    "V integer monolithic": "V layered execution and wiring evidence",
+    "direct JALR dependency core": "JALRDependencyHarness end-to-end evidence"
+  },
+  "status": "complete",
+  "test_counts": {
+    "tests/test_extension_config.py": 60,
+    "tests/test_gc_backend_config.py": 6,
+    "tests/test_isa_standard_completion.py": 984,
+    "tests/test_jasper_gc_accelerator_config.py": 10,
+    "tests/test_jasper_gc_ip_config.py": 17
+  },
+  "v_test_file_count": 62,
+  "wiring_marker_count": 10
+}

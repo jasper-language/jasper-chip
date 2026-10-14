@@ -1,0 +1,27 @@
+Category,Item,Status,Priority,Notes
+Adapter,CPU-package/chiplet (MAINLINE),MAINLINE,P0,Low-latency coherent chiplet interface; sole mainline target
+Adapter,CXL.mem,FUTURE_EXPERIMENT,P2,Coherent server memory pool adapter; not active
+Adapter,DPU/SmartNIC,FUTURE_GATEWAY_EXPERIMENT,P3,Gateway offload via SmartNIC; not active
+Adapter,PCIe DMA,FUTURE_BACKGROUND_BATCH,P2,Background batch processing via PCIe; not active
+Protocol,Command protocol,ARCHITECTURE,P0,16+ field command descriptor; posted to CommandQueue
+Protocol,Completion protocol,ARCHITECTURE,P0,13+ field completion descriptor; posted to CompletionQueue
+Profile,accel_lite,ARCHITECTURE,P1,scan+sweep; 4-entry queue; 64B DMA; IO-coherent; future PCIe
+Profile,accel_standard,ARCHITECTURE,P0,scan+sweep+rebuild; 8-entry queue; 128B DMA; IO-coherent; chiplet
+Profile,accel_server,MAINLINE_STUDY,P0,full cold path; 16-entry queue; 256B DMA; fully coherent; chiplet
+Profile,accel_extreme,RESEARCH/HOLD,P2,multi-region HBM-aware; 32-entry queue; 512B DMA; fully coherent; chiplet
+Module,CommandQueue,ARCHITECTURE,P0,Input FIFO accepting commands from Core/driver
+Module,RegionScheduler,ARCHITECTURE,P0,Assigns commands to engines; enforces region ownership and ordering
+Module,ScanEngine,ARCHITECTURE,P0,Scans region for live objects via mark bit traversal
+Module,SweepEngine,ARCHITECTURE,P0,Reclaims dead objects and rebuilds free-list
+Module,CompactEngine,ARCHITECTURE,P1,Relocates live objects and updates forwarding pointers
+Module,MetadataRebuildEngine,ARCHITECTURE,P1,Rebuilds region metadata after sweep/compact operations
+Module,MemoryAccess,ARCHITECTURE,P0,Handles DMA and atomic RMW memory transactions
+Module,CompletionQueue,ARCHITECTURE,P0,Output FIFO writing completion records back to Core/driver
+Collaboration,Async non-blocking,ARCHITECTURE,P0,Core posts command; accelerator processes and completes independently
+Collaboration,Correlation ID matching,ARCHITECTURE,P0,correlation_id echoes from command to completion
+Collaboration,Epoch validation,ARCHITECTURE,P0,Epoch tag validated before processing; mismatch => ABORTED
+Correctness,Epoch rules,ARCHITECTURE,P0,Monotonic epoch; reject mismatched commands; tag memory transactions
+Correctness,Region ownership,ARCHITECTURE,P0,Max one command per region; enforced by RegionScheduler
+Correctness,Ordering rules,ARCHITECTURE,P0,Same-region FIFO; cross-region parallel; completion ordering per-region
+Correctness,Error handling,ARCHITECTURE,P0,ABORTED/BUSY/ERROR/UNSUPPORTED/RETRY status codes with recovery
+Correctness,Coherency model,ARCHITECTURE,P0,IO-coherent for lite/standard; fully coherent for server/extreme

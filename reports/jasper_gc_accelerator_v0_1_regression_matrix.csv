@@ -1,0 +1,212 @@
+phase,component,test_group,test_name,status,gate,tests,notes
+v0.1,command_queue,queue_unit,test_command_push_pop,PASS,V0_1_GATE,1,
+v0.1,command_queue,queue_unit,test_command_backpressure,PASS,V0_1_GATE,1,
+v0.1,command_queue,queue_unit,test_command_idle,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_unit,test_region_lock_scan,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_unit,test_region_lock_sweep,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_unit,test_region_lock_shared_exclusive,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_unit,test_stale_epoch_reject,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_unit,test_unsupported_reject,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_region,test_region_base_0,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_region,test_region_base_1,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_region,test_region_base_2,PASS,V0_1_GATE,1,
+v0.1,scheduler,scheduler_region,test_region_base_3,PASS,V0_1_GATE,1,
+v0.1,completion_queue,queue_unit,test_completion_push_pop,PASS,V0_1_GATE,1,
+v0.1,completion_queue,queue_unit,test_completion_backpressure,PASS,V0_1_GATE,1,
+v0.1,completion_queue,queue_unit,test_completion_idle,PASS,V0_1_GATE,1,
+v0.1,scan_engine,engine_unit,test_scan_counting,PASS,V0_1_GATE,1,
+v0.1,scan_engine,engine_unit,test_scan_memory_mode,PASS,V0_1_GATE,1,
+v0.1,scan_engine,engine_unit,test_scan_region_base,PASS,V0_1_GATE,1,
+v0.1,sweep_engine,engine_unit,test_sweep_counting,PASS,V0_1_GATE,1,
+v0.1,sweep_engine,engine_unit,test_sweep_memory_mode,PASS,V0_1_GATE,1,
+v0.1,sweep_engine,engine_unit,test_sweep_region_base,PASS,V0_1_GATE,1,
+v0.1,rebuild_engine,engine_unit,test_rebuild_counting,PASS,V0_1_GATE,1,
+v0.1,rebuild_engine,engine_unit,test_rebuild_memory_mode,PASS,V0_1_GATE,1,
+v0.1,rebuild_engine,engine_unit,test_rebuild_region_base,PASS,V0_1_GATE,1,
+v0.1,compact_engine,engine_unit,test_compact_counting,PASS,V0_1_GATE,1,
+v0.1,compact_engine,engine_unit,test_compact_memory_mode,PASS,V0_1_GATE,1,
+v0.1,compact_engine,engine_unit,test_compact_region_base,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_priority,test_mre_beats_sweep_beats_scan,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_priority,test_sweep_beats_scan,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_priority,test_scan_alone,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_outstanding,test_outstanding_blocks_all,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_backpressure,test_response_hold_under_backpressure,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_route,test_response_route_correct,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_3,arbiter_tag,test_tag_set_equality,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_priority,test_compact_beats_all,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_priority,test_mre_beats_sweep_beats_scan,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_priority,test_sweep_beats_scan,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_priority,test_scan_alone,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_outstanding,test_outstanding_blocks_all,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_backpressure,test_response_hold_under_backpressure,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_backpressure,test_outstanding_cleared_on_rsp_accept,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_route,test_compact_response_route,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_route,test_mre_response_route,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_route,test_sweep_response_route,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_route,test_scan_response_route,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_stable,test_out_engine_stable_under_backpressure,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_tag,test_tag_set_equality,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_noloss,test_no_missing_responses,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_noloss,test_no_duplicate_responses,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_noloss,test_priority_no_overwrite_route,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_noloss,test_no_last_sel_routing,PASS,V0_1_GATE,1,
+v0.1,memory_arbiter_4,arbiter_noloss,test_single_outstanding,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_unit,test_read_accepts_requests,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_unit,test_backpressure,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_unit,test_response_hold,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_unit,test_no_loss,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_hardening,test_latency_0,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_hardening,test_tag_preservation,PASS,V0_1_GATE,1,
+v0.1,memory_access,mem_hardening,test_rsp_hold_backpressure,PASS,V0_1_GATE,1,
+v0.1,coherent_access,unit_elab,test_elab,PASS,V0_1_GATE,1,Module elaborates
+v0.1,coherent_access,unit_hit,test_read_hit,PASS,V0_1_GATE,1,Coherent hit read
+v0.1,coherent_access,unit_hit,test_read_miss,PASS,V0_1_GATE,1,Coherent miss read
+v0.1,coherent_access,unit_write,test_write,PASS,V0_1_GATE,1,Write enable OK
+v0.1,coherent_access,unit_write,test_write_disabled_unsupported,PASS,V0_1_GATE,1,Write disabled UNSUPPORTED
+v0.1,coherent_access,unit_backpressure,test_request_backpressure_queue_full,PASS,V0_1_GATE,1,Request backpressure
+v0.1,coherent_access,unit_backpressure,test_response_backpressure_hold,PASS,V0_1_GATE,1,Response hold
+v0.1,coherent_access,unit_backpressure,test_response_data_stable,PASS,V0_1_GATE,1,Data stable under backpressure
+v0.1,coherent_access,unit_backpressure,test_response_tag_stable,PASS,V0_1_GATE,1,Tag stable under backpressure
+v0.1,coherent_access,unit_tag_epoch,test_read_tag_epoch,PASS,V0_1_GATE,1,Read preserves tag/epoch
+v0.1,coherent_access,unit_tag_epoch,test_write_tag_epoch,PASS,V0_1_GATE,1,Write preserves tag/epoch
+v0.1,coherent_access,unit_noloss,test_accepted_equals_response,PASS,V0_1_GATE,1,No-loss tag equality
+v0.1,coherent_access,unit_noloss,test_no_missing_response,PASS,V0_1_GATE,1,No missing tags
+v0.1,coherent_access,unit_noloss,test_no_duplicate_response,PASS,V0_1_GATE,1,No duplicate tags
+v0.1,coherent_access,unit_sequence,test_mixed_read_write_sequence,PASS,V0_1_GATE,1,Interleaved R/W
+v0.1,coherent_access,unit_sequence,test_hit_miss_report,PASS,V0_1_GATE,1,Correct rsp_hit across mask
+v0.1,coherent_access,unit_sequence,test_read_after_write_sequence,PASS,V0_1_GATE,1,Write-then-read sequence
+v0.1,coherent_access,unit_error,test_fault_injection,PASS,V0_1_GATE,1,FAULT on fault_tag
+v0.1,coherent_access,unit_error,test_unsupported_status,PASS,V0_1_GATE,1,UNSUPPORTED status
+v0.1,coherent_access_adapter,elab,test_elab,PASS,V0_1_GATE,1,Adapter elaborates
+v0.1,coherent_access_adapter,read,test_read_hit,PASS,V0_1_GATE,1,Read hit via adapter
+v0.1,coherent_access_adapter,read,test_read_miss,PASS,V0_1_GATE,1,Read miss via adapter
+v0.1,coherent_access_adapter,write,test_write,PASS,V0_1_GATE,1,Write via adapter
+v0.1,coherent_access_adapter,write,test_write_disabled_unsupported,PASS,V0_1_GATE,1,UNSUPPORTED via dbg
+v0.1,coherent_access_adapter,tag,test_tag_16bit_preserved,PASS,V0_1_GATE,1,16-bit tag end-to-end
+v0.1,coherent_access_adapter,backpressure,test_response_backpressure_hold,PASS,V0_1_GATE,1,Response hold
+v0.1,coherent_access_adapter,backpressure,test_request_backpressure,PASS,V0_1_GATE,1,Request backpressure
+v0.1,coherent_access_adapter,backpressure,test_response_backpressure_hold_data_stable,PASS,V0_1_GATE,1,Data stable under hold
+v0.1,coherent_access_adapter,noloss,test_no_loss,PASS,V0_1_GATE,1,No-loss tag equality
+v0.1,coherent_access_adapter,noloss,test_no_missing_response,PASS,V0_1_GATE,1,No missing tags
+v0.1,coherent_access_adapter,noloss,test_no_duplicate_response,PASS,V0_1_GATE,1,No duplicate tags
+v0.1,coherent_access_adapter,error,test_fault_status_on_dbg,PASS,V0_1_GATE,1,FAULT on dbg_rsp_status
+v0.1,coherent_access_adapter,error,test_dbg_rsp_error_follows_status,PASS,V0_1_GATE,1,Error follows status
+v0.1,coherent_access_adapter,debug,test_dbg_rsp_hit_reports,PASS,V0_1_GATE,1,Hit/miss on dbg
+v0.1,coherent_access_adapter,debug,test_dbg_rsp_epoch_passthrough,PASS,V0_1_GATE,1,Epoch passthrough
+v0.1,coherent_access_adapter,sequence,test_mixed_read_write_sequence,PASS,V0_1_GATE,1,Interleaved R/W
+v0.1,arbiter_adapter,tag,test_jasper_gc_arbiter_coherent_adapter.py::test_16bit_tag_preserved,PASS,V0_1_GATE,1,16-bit tag end-to-end
+v0.1,arbiter_adapter,outstanding,test_jasper_gc_arbiter_coherent_adapter.py::test_adapter_does_not_change_single_outstanding,PASS,V0_1_GATE,1,Outstanding unchanged by adapter
+v0.1,arbiter_adapter,engine_request,test_jasper_gc_arbiter_coherent_adapter.py::test_compact_request,PASS,V0_1_GATE,1,Compact request via harness
+v0.1,arbiter_adapter,error,test_jasper_gc_arbiter_coherent_adapter.py::test_dbg_rsp_error_follows_status,PASS,V0_1_GATE,1,Error follows status
+v0.1,arbiter_adapter,debug,test_jasper_gc_arbiter_coherent_adapter.py::test_dbg_rsp_hit_visible,PASS,V0_1_GATE,1,Hit/miss on dbg
+v0.1,arbiter_adapter,error,test_jasper_gc_arbiter_coherent_adapter.py::test_dbg_rsp_status_fault,PASS,V0_1_GATE,1,FAULT on fault_tag
+v0.1,arbiter_adapter,error,test_jasper_gc_arbiter_coherent_adapter.py::test_dbg_rsp_status_unsupported,PASS,V0_1_GATE,1,UNSUPPORTED status
+v0.1,arbiter_adapter,elab,test_jasper_gc_arbiter_coherent_adapter.py::test_elab,PASS,V0_1_GATE,1,Harness elaborates
+v0.1,arbiter_adapter,engine_request,test_jasper_gc_arbiter_coherent_adapter.py::test_mre_request,PASS,V0_1_GATE,1,MRE request via harness
+v0.1,arbiter_adapter,noloss,test_jasper_gc_arbiter_coherent_adapter.py::test_no_duplicate_response,PASS,V0_1_GATE,1,No duplicate tags
+v0.1,arbiter_adapter,noloss,test_jasper_gc_arbiter_coherent_adapter.py::test_no_loss,PASS,V0_1_GATE,1,No-loss tag equality
+v0.1,arbiter_adapter,noloss,test_jasper_gc_arbiter_coherent_adapter.py::test_no_missing_response,PASS,V0_1_GATE,1,No missing tags
+v0.1,arbiter_adapter,priority,test_jasper_gc_arbiter_coherent_adapter.py::test_priority_compact_over_all,PASS,V0_1_GATE,1,Compact beats all
+v0.1,arbiter_adapter,priority,test_jasper_gc_arbiter_coherent_adapter.py::test_priority_mre_over_sweep_scan,PASS,V0_1_GATE,1,MRE beats sweep/scan
+v0.1,arbiter_adapter,priority,test_jasper_gc_arbiter_coherent_adapter.py::test_priority_sweep_over_scan,PASS,V0_1_GATE,1,Sweep beats scan
+v0.1,arbiter_adapter,backpressure,test_jasper_gc_arbiter_coherent_adapter.py::test_response_backpressure_hold,PASS,V0_1_GATE,1,Response hold under backpressure
+v0.1,arbiter_adapter,route,test_jasper_gc_arbiter_coherent_adapter.py::test_response_route_not_overwritten,PASS,V0_1_GATE,1,Route preserved under outstanding
+v0.1,arbiter_adapter,engine_request,test_jasper_gc_arbiter_coherent_adapter.py::test_scan_request,PASS,V0_1_GATE,1,Scan request via harness
+v0.1,arbiter_adapter,outstanding,test_jasper_gc_arbiter_coherent_adapter.py::test_single_outstanding_blocks_all,PASS,V0_1_GATE,1,Single outstanding blocks all
+v0.1,arbiter_adapter,engine_request,test_jasper_gc_arbiter_coherent_adapter.py::test_sweep_request,PASS,V0_1_GATE,1,Sweep request via harness
+v0.1,integ_3engine,scan_integration,test_scan_basic,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,scan_integration,test_scan_backpressure,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,sweep_integration,test_sweep_basic,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,mre_integration,test_rebuild_basic,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,no_loss,test_scan_sweep_rebuild_mixed,PASS,V0_1_GATE,3,
+v0.1,integ_3engine,memory_stress,test_scan_memory_alone,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,memory_stress,test_sweep_memory_alone,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,memory_stress,test_rebuild_memory_alone,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,memory_stress,test_three_engine_mixed,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,memory_stress,test_epoch_preserved,PASS,V0_1_GATE,1,
+v0.1,integ_3engine,memory_stress,test_counting_backward,PASS,V0_1_GATE,1,
+v0.1,integ_compact,compact_integration,test_top_compact_memory,PASS,V0_1_GATE,1,
+v0.1,integ_compact,compact_integration,test_top_four_engines_memory,PASS,V0_1_GATE,1,
+v0.1,integ_compact,compact_integration,test_top_compact_counting,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,burst,test_four_engine_mixed_burst,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,closure,test_four_engine_no_loss_closure,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,single_memory,test_scan_memory_command,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,single_memory,test_sweep_memory_command,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,single_memory,test_rebuild_memory_command,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,single_memory,test_compact_memory_command,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,backpressure,test_stale_epoch_rejected,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,backpressure,test_unsupported_rejected,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,backpressure,test_command_backpressure_no_loss,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,backpressure,test_completion_backpressure_no_loss,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,backward,test_counting_mode_backward,PASS,V0_1_GATE,1,
+v0.1,integ_4engine,model,test_compact_read_only_model,PASS,V0_1_GATE,1,
+v0.1,perf_counters,single,test_single_scan_counters,PASS,V0_1_GATE,1,
+v0.1,perf_counters,four_engine,test_four_engine_counters,PASS,V0_1_GATE,1,
+v0.1,perf_counters,mem_match,test_mem_req_rsp_match,PASS,V0_1_GATE,1,
+v0.1,perf_counters,cmd_bp,test_cmd_backpressure,PASS,V0_1_GATE,1,
+v0.1,perf_counters,comp_bp,test_comp_backpressure,PASS,V0_1_GATE,1,
+v0.1,perf_counters,outstanding,test_single_outstanding_block,PASS,V0_1_GATE,1,
+v0.1,perf_counters,reject,test_stale_epoch_reject_counter,PASS,V0_1_GATE,1,
+v0.1,perf_counters,reject,test_unsupported_reject_counter,PASS,V0_1_GATE,1,
+v0.1,perf_counters,counting,test_counting_mode_mem_counters_zero,PASS,V0_1_GATE,1,
+v0.1,legacy_stress,continuous_pulse,test_16_mixed,HOLD,LEGACY_HOLD,1,continuous-pulse stress; not part of v0.1 pulse-mode gate
+v0.1,legacy_stress,continuous_pulse,test_no_missing_16,HOLD,LEGACY_HOLD,1,continuous-pulse stress; not part of v0.1 pulse-mode gate
+v0.1,limitations,pulse_mode,pulse_mode_protocol_documented,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,pulse_mode,continuous_cmd_valid_future,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,memory,memory_access_read_only_model,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,compact,compact_read_only_model,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,coherent,coherent_access_future,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,phy,chiplet_phy_future,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,multi,multi_outstanding_future,PASS,V0_1_GATE,1,doc_verify
+v0.1,limitations,write,write_path_future,PASS,V0_1_GATE,1,doc_verify
+v0_2,arbiter_multi_outstanding,elab,test_elab_d1,PASS,V0_2_GATE,1,max_outstanding=1 elaborates
+v0_2,arbiter_multi_outstanding,elab,test_elab_d4,PASS,V0_2_GATE,1,max_outstanding=4 elaborates
+v0_2,arbiter_multi_outstanding,backward_compat,test_single_outstanding_backward_compat,PASS,V0_2_GATE,1,max_os=1 matches v0.1
+v0_2,arbiter_multi_outstanding,outstanding,test_two_outstanding_compact_mre,PASS,V0_2_GATE,1,N=2 compact+mre interleaved
+v0_2,arbiter_multi_outstanding,outstanding,test_four_outstanding_all_engines,PASS,V0_2_GATE,1,N=4 all engines interleaved
+v0_2,arbiter_multi_outstanding,backpressure,test_backpressure_at_max,PASS,V0_2_GATE,1,N=4 backpressure holds at max
+v0_2,arbiter_multi_outstanding,order,test_response_order_preserved,PASS,V0_2_GATE,1,Per-engine order preserved
+v0_2,arbiter_multi_outstanding,rrb,test_rrb_wraparound,PASS,V0_2_GATE,1,RRB slot wraparound
+v0_2,arbiter_multi_outstanding,tag,test_tag_round_trip,PASS,V0_2_GATE,1,Tag through RRB round-trip
+v0_2,arbiter_multi_outstanding,rrb,test_rrb_slot_reuse,PASS,V0_2_GATE,1,RRB slot reuse after drain
+v0_2,arbiter_multi_outstanding,tag,test_rsp_tag_engine_specific,PASS,V0_2_GATE,1,Response tag matches engine
+v0_2,chiplet_link,elab,test_elab,PASS,V0_2_GATE,1,ChipletLink elaborates
+v0_2,chiplet_link,read,test_simple_read,PASS,V0_2_GATE,1,Simple read request
+v0_2,chiplet_link,write,test_simple_write,PASS,V0_2_GATE,1,Simple write request
+v0_2,chiplet_link,backpressure,test_backpressure,PASS,V0_2_GATE,1,Request backpressure
+v0_2,chiplet_link,backpressure,test_response_backpressure_hold,PASS,V0_2_GATE,1,Response hold
+v0_2,chiplet_link,noloss,test_no_loss,PASS,V0_2_GATE,1,No-loss tag equality
+v0_2,chiplet_link,credit,test_credit_mode,PASS,V0_2_GATE,1,Credit-based flow control
+v0_2,chiplet_link,credit,test_credit_exhaustion,PASS,V0_2_GATE,1,Credit exhaustion blocks requests
+v0_2,chiplet_link,credit,test_credit_return,PASS,V0_2_GATE,1,Credit return on response
+v0_2,chiplet_link,error,test_error_injection,PASS,V0_2_GATE,1,Error injection on link
+v0_2,chiplet_link,tag,test_tag_preservation,PASS,V0_2_GATE,1,12-bit tag preserved
+v0_2,chiplet_link,latency,test_configurable_latency,PASS,V0_2_GATE,1,Configurable link latency
+v0_2,chiplet_link,profile,test_profile_presets,PASS,V0_2_GATE,1,Profile presets
+v0_2,accelerator_regs,elab,test_elab,PASS,V0_2_GATE,1,AcceleratorRegs elaborates
+v0_2,accelerator_regs,version,test_version_read,PASS,V0_2_GATE,1,Version register RO
+v0_2,accelerator_regs,control,test_control_write_read,PASS,V0_2_GATE,1,Control register RW
+v0_2,accelerator_regs,protection,test_ro_write_ignored,PASS,V0_2_GATE,1,RO write ignored
+v0_2,accelerator_regs,mmio,test_unmapped_read,PASS,V0_2_GATE,1,Unmapped read returns 0
+v0_2,accelerator_regs,write,test_wstrb_partial,PASS,V0_2_GATE,1,Partial write strobe
+v0_2,accelerator_regs,read,test_back_to_back_read,PASS,V0_2_GATE,1,Back-to-back read
+v0_2,accelerator_regs,status,test_busy_status,PASS,V0_2_GATE,1,Status busy bit
+v0_2,compact_engine,writeback,test_compact_writeback,PASS,V0_2_GATE,1,Basic relocation writeback
+v0_2,compact_engine,writeback,test_compact_writeback_count,PASS,V0_2_GATE,1,Relocation count matches moved
+v0_2,compact_engine,writeback,test_compact_writeback_addr,PASS,V0_2_GATE,1,Writeback addresses differ from source
+v0_2,compact_engine,writeback,test_compact_writeback_no_reloc,PASS,V0_2_GATE,1,No relocation when threshold low
+v0_2,compact_engine,writeback,test_compact_writeback_backpressure,PASS,V0_2_GATE,1,Writeback under backpressure
+v0_2,memory_access,write,test_write_data_stored,PASS,V0_2_GATE,1,Write data echoed on response
+v0_2,memory_access,write,test_read_data_generated,PASS,V0_2_GATE,1,Read data deterministic addr^tag
+v0_2,memory_access,write,test_write_data_backpressure,PASS,V0_2_GATE,1,Write under backpressure
+v0_2,memory_access,write,test_write_read_interleave,PASS,V0_2_GATE,1,Interleaved write/read data correct
+v0_2,command_queue,burst,test_cmd_queue_burst_enable,PASS,V0_2_GATE,1,Burst mode pushes consecutive cmds
+v0_2,command_queue,burst,test_cmd_queue_burst_disable,PASS,V0_2_GATE,1,Pulse mode (default) pushes 1 cmd
+v0_2,accelerator_ip,per_engine_memory,test_per_engine_memory_off,PASS,V0_2_GATE,1,Default shared MemoryAccess works
+v0_2,accelerator_ip,per_engine_memory,test_per_engine_memory_on,PASS,V0_2_GATE,1,Per-engine MemoryAccess works
+v0_2,accelerator_ip,per_engine_memory,test_per_engine_concurrent_access,PASS,V0_2_GATE,1,Concurrent overlapping memory access
+v0_2,accelerator_ip,per_engine_memory,test_per_engine_tag_isolation,PASS,V0_2_GATE,1,Tag isolation across engines
+v0_2,accelerator_ip,memory_model,test_memory_model_default,PASS,V0_2_GATE,1,Default memory_model=MemoryAccess
+v0_2,accelerator_ip,memory_model,test_memory_model_chiplet_link,PASS,V0_2_GATE,1,memory_model=chiplet_link instantiates ChipletLink
+v0_2,accelerator_ip,memory_model,test_memory_model_coherent,PASS,V0_2_GATE,1,memory_model=coherent instantiates CoherentAccessAdapter
+v0_2,accelerator_ip,chiplet_integration,test_chiplet_link_mem_heavy,PASS,V0_2_GATE,1,4-engine via arbiter on chiplet_link

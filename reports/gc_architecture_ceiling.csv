@@ -1,0 +1,11 @@
+tier,config,throughput_evt_per_cycle,verification_status,verification_type,profile,route_decision
+1,1L_backend,1.0,pass,rtl_integrated,standard,go
+2,2L_tile,2.0,pass,rtl_integrated,gateway,go
+3,2Lx2_cluster,4.0,partial,rtl_partial,server,go
+3,2Lx4_cluster,8.0,pending,model_only,future,go
+3,2Lx8_cluster,16.0,pending,model_only,future,hold
+4,4L_wide,2.68,study,model_only,research,hold
+5,8L_wide,3.59,study,model_only,none,nogo
+6,multi_output_only,1.0,pass,rtl_integrated,none,nogo
+7,multi_input_wide_2lane,2.0,study,model_only,research,hold
+8,multi_input_wide_4lane,4.0,study,model_only,none,hold

@@ -1,0 +1,10 @@
+tile_count,lane_per_tile,ideal_evt_per_cycle,effective_evt_per_cycle,efficiency_pct,dispatch_cost_ge,merge_balance,verification_tests,recommendation,notes
+1,2,2.0,1.75,87.5,0,perfect,8,go,gateway_baseline
+2,2,4.0,3.50,87.5,0,perfect,14,go,server_basic
+3,2,6.0,5.0,83.0,350,unbalanced,21,nogo,modulo_divider
+4,2,8.0,7.00,87.5,0,perfect,15,go,server
+5,2,10.0,8.2,82.0,350,unbalanced,28,nogo,modulo_skew
+6,2,12.0,10.0,83.0,350,unbalanced,26,internal_only,test_only
+7,2,14.0,11.5,82.0,350,unbalanced,26,nogo,modulo_skew
+8,2,16.0,14.00,87.5,0,perfect,18,go,extreme
+16,2,32.0,28.00,87.5,0,perfect,21,hold,future_rd

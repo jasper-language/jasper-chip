@@ -1,0 +1,8 @@
+n,tile_count,evt_per_cycle,limit_type,status,cpu_frontend_required,noc_bw_gbps,mem_bw_gbps,external_accelerator,recommended_interconnect
+0,1,2.0,gc_backend,rtl,none,0,2,none,none
+1,2,4.0,gc_backend,rtl,none,4,4,none,none
+2,4,8.0,fabric,rtl,none,8,8,optional_sweep,pcie_gen5
+3,8,16.0,interconnect,model,multi_issue_gc,16,16,recommended_cold_path,cxl_mem
+4,16,32.0,memory_bandwidth,model,per_core_gc_queue,32,32,recommended_compaction,cxl_mem_chiplet
+5,32,64.0,dram_channels,model,hw_gc_scheduler,64,64,required,hbm_cxl
+6,64,128.0,system_power,model,hw_gc_scheduler,128,128,required,chiplet_hbm

@@ -1,0 +1,373 @@
+{
+  "base_cfg": {
+    "seed": 20260103,
+    "ncores": 4,
+    "epochs": 2,
+    "events_per_core_per_epoch": 64,
+    "card_space": 64,
+    "zipf_s": 1.07,
+    "phase_shift": 7
+  },
+  "scan_defaults": {
+    "cardset_size": 8,
+    "fifo_depth": 1,
+    "consume_every": 2,
+    "batch_size": 2
+  },
+  "workload_modes": [
+    "shared_hot_shift",
+    "per_core_partition"
+  ],
+  "global_share_p": 0.1,
+  "weights": {
+    "w_cycle": 1.0,
+    "w_stall": 8.0,
+    "w_replace": 4.0
+  },
+  "grid_size": 36,
+  "topk": [
+    {
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 1
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 16,
+        "ways": 4,
+        "index_mode": 2
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 32,
+        "ways": 2,
+        "index_mode": 0
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 32,
+        "ways": 2,
+        "index_mode": 1
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 32,
+        "ways": 2,
+        "index_mode": 2
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 32,
+        "ways": 4,
+        "index_mode": 0
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 32,
+        "ways": 4,
+        "index_mode": 1
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 32,
+        "ways": 4,
+        "index_mode": 2
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 544.0,
+        "per_core_partition": 544.0
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 108,
+          "hit": 404,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 0,
+          "miss": 114,
+          "hit": 398,
+          "dup": 0
+        }
+      }
+    },
+    {
+      "sweep": {
+        "sets": 8,
+        "ways": 4,
+        "index_mode": 1
+      },
+      "per_mode_score": {
+        "shared_hot_shift": 932.0,
+        "per_core_partition": 1072.0
+      },
+      "worst_mode": "per_core_partition",
+      "worst_score": 1072.0,
+      "per_mode_stats": {
+        "shared_hot_shift": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 97,
+          "miss": 161,
+          "hit": 351,
+          "dup": 0
+        },
+        "per_core_partition": {
+          "cycle": 544,
+          "stall_in": 0,
+          "replace": 132,
+          "miss": 196,
+          "hit": 316,
+          "dup": 0
+        }
+      }
+    }
+  ],
+  "sensitivity": [
+    {
+      "param": "sets",
+      "mean_worst_by_value": {
+        "4": 2081.3333333333335,
+        "8": 1703.5555555555557,
+        "16": 1313.7777777777778,
+        "32": 845.7777777777778
+      },
+      "delta": 1235.5555555555557,
+      "best_value": 32
+    },
+    {
+      "param": "ways",
+      "mean_worst_by_value": {
+        "1": 2001.0,
+        "2": 1473.3333333333333,
+        "4": 984.0
+      },
+      "delta": 1017.0,
+      "best_value": 4
+    },
+    {
+      "param": "index_mode",
+      "mean_worst_by_value": {
+        "0": 1531.0,
+        "1": 1396.3333333333333,
+        "2": 1531.0
+      },
+      "delta": 134.66666666666674,
+      "best_value": 1
+    }
+  ]
+}

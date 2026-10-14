@@ -1,0 +1,25 @@
+module,profile,depth,top_bottleneck,freq_class,note
+GCSubsystem,lite,48,prio_enc(24),B,500MHz-1GHz class
+GCMemPolicy,lite,54,prio_enc(24),C,250-500MHz class
+RootScanner,lite,16,fifo(10),A,>1GHz class (estimated)
+HeapWalker,lite,20,fifo(10),A,>1GHz class (estimated)
+CycleCtrl,lite,10,compares(8),A,>1GHz class (estimated)
+ScanCoProc,lite,14,compares(12),A,>1GHz class (estimated)
+SweepCoProc,lite,27,compares(20),A,>1GHz class (estimated)
+MvCoProc,lite,19,compares(12),A,>1GHz class (estimated)
+GCSubsystem,standard,74,prio_enc(48),C,250-500MHz class
+GCMemPolicy,standard,118,prio_enc(48),D,<250MHz, needs pipeline/bank
+RootScanner,standard,18,fifo(10),A,>1GHz class (estimated)
+HeapWalker,standard,22,fifo(10),A,>1GHz class (estimated)
+CycleCtrl,standard,12,compares(8),A,>1GHz class (estimated)
+ScanCoProc,standard,16,compares(12),A,>1GHz class (estimated)
+SweepCoProc,standard,29,compares(20),A,>1GHz class (estimated)
+MvCoProc,standard,21,compares(12),A,>1GHz class (estimated)
+GCSubsystem,server,124,prio_enc(96),D,<250MHz, needs pipeline/bank
+GCMemPolicy,server,200,prio_enc(96),D,<250MHz, needs pipeline/bank
+RootScanner,server,20,fifo(10),A,>1GHz class (estimated)
+HeapWalker,server,24,fifo(10),A,>1GHz class (estimated)
+CycleCtrl,server,14,compares(8),A,>1GHz class (estimated)
+ScanCoProc,server,18,compares(12),A,>1GHz class (estimated)
+SweepCoProc,server,31,compares(20),B,500MHz-1GHz class
+MvCoProc,server,23,compares(12),A,>1GHz class (estimated)

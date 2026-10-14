@@ -1,0 +1,45 @@
+section,key,value,unit,notes
+config,profile,Standard,,
+config,gc_slots,16,,
+config,wb_depth,8,,
+config,rb_slots,8,,
+config,backend_count,1,,
+config,metadata_cache_size,4096,bytes,
+
+throughput,scenario,gc_ratio,meta_rate,wb_rate,rb_rate,steady,bottleneck,max_gc
+throughput,Idle,0.00,0.0000,0.0000,0.0000,True,metadata_cache,0.25
+throughput,Normal,0.05,0.0400,0.0250,0.0150,True,metadata_cache,0.25
+throughput,Standard,0.10,0.0800,0.0500,0.0300,True,metadata_cache,0.25
+throughput,HighLoad,0.20,0.1600,0.1000,0.0600,True,metadata_cache,0.25
+throughput,Stress,0.25,0.2000,0.1250,0.0750,True,metadata_cache,0.25
+throughput,Stress30,0.30,0.2400,0.1500,0.0900,False,metadata_cache,0.25
+
+
+timing,module,gate_count,cell_count,risk_class,bottleneck,recommendation
+timing,GCSubsystem (top),3500,862,B,priority_encoder_gc_slots,Monitor PE width; reduce if > 8
+timing,GCMemoryPolicy,1200,,A,none,Low risk; stream buffer match is shallow
+timing,MetadataCacheStandard,1800,,B,combinational_tag_compare,Pipelined variant reduces timing pressure
+timing,StreamBuffer,600,,A,none,Shallow; no timing concern
+timing,RootScanner,800,,B,root_table_compare,Pipeline root table lookup if > 64 entries
+timing,HeapWalker,900,,B,object_scan_width_mux,Keep scan width <= 4; pipeline if wider
+timing,CycleController,500,,A,none,FSM-based; trivial timing
+timing,ScanCoProc,1000,,B,card_table_compare,Bank card table if > 32 entries
+timing,SweepCoProc,800,,A,none,Simple state machine; low risk
+timing,MvCoProc (ForwardingTable),700,,B,forwarding_chase_chain,Limit chase_depth to 2
+
+
+process,node_nm,gc_subsys_ge,gc_pure_ge,meta_cache_ge,total_ge,frontend_ghz,backend_ghz
+process,45nm,3500,22000,55000,60000,1.00,0.90
+process,28nm,3500,22000,55000,60000,1.00,0.90
+process,14nm,1925,12100,30250,33000,1.20,1.08
+process,7nm,1059,6655,16638,18150,1.44,1.30
+process,5nm,792,4979,12447,13578,1.57,1.42
+process,3nm,510,3205,8011,8740,1.80,1.62
+
+
+power,load,gc_frontend_mw,meta_cache_mw,stream_buf_mw,backend_mw,total_mw,energy_per_event_pj,activity_factor
+power,Idle,0.018,0.138,0.003,0.110,0.268,0.000,0.02
+power,Normal,0.088,0.688,0.015,0.550,1.340,16.750,0.1
+power,Standard,0.175,1.375,0.030,1.100,2.680,16.750,0.2
+power,HighLoad,0.306,2.406,0.053,1.925,4.690,14.656,0.35
+power,Stress,0.438,3.438,0.075,2.750,6.700,13.958,0.5

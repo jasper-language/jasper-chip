@@ -1,0 +1,8 @@
+n,tile_count,ideal_evt_per_cycle,effective_evt_per_cycle,efficiency_pct,dispatcher_depth,merge_tree_depth,global_merge_latency,estimated_gates,estimated_power_mw,metadata_banks,forwarding_banks,interconnect_bw_evt_per_cyc,first_bottleneck,recommended_status
+0,1,2.0,2.0,100,0,0,0,95000,2.8,2,2,2,none,go_product
+1,2,4.0,4.0,100,1,1,2,190000,5.6,4,4,4,none,go_product
+2,4,8.0,8.0,100,2,2,4,380000,11.2,8,8,8,none,go_product
+3,8,16.0,14.0,88,3,3,6,760000,22.4,16,16,16,merge_tree_latency,hold_product
+4,16,32.0,28.0,88,4,4,8,1520000,44.8,32,32,32,interconnect_bw,hold_research
+5,32,64.0,56.0,88,5,5,10,3040000,89.6,64,64,64,memory_bw,model_only
+6,64,128.0,110.0,86,6,6,12,6080000,179.2,128,128,128,dram_channels,model_only

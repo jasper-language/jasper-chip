@@ -1,0 +1,215 @@
+{
+  "base_cfg_no_seed": {
+    "card_space": 64,
+    "epochs": 2,
+    "events_per_core_per_epoch": 64,
+    "ncores": 4,
+    "phase_shift": 7,
+    "zipf_s": 1.07
+  },
+  "per_seed": [
+    {
+      "profiles": [
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 910.0,
+          "cost": 33.0,
+          "profile": "step30",
+          "worst_mode": "per_core_partition",
+          "worst_score": 1042.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 544.0,
+          "cost": 77.0,
+          "profile": "step40_joint",
+          "worst_mode": "shared_hot_shift",
+          "worst_score": 544.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 3394.0,
+          "cost": 21.0,
+          "profile": "step40_pareto3",
+          "worst_mode": "per_core_partition",
+          "worst_score": 3524.0
+        }
+      ],
+      "seed": 20260102
+    },
+    {
+      "profiles": [
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 966.0,
+          "cost": 33.0,
+          "profile": "step30",
+          "worst_mode": "per_core_partition",
+          "worst_score": 1106.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 544.0,
+          "cost": 77.0,
+          "profile": "step40_joint",
+          "worst_mode": "shared_hot_shift",
+          "worst_score": 544.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 3394.0,
+          "cost": 21.0,
+          "profile": "step40_pareto3",
+          "worst_mode": "per_core_partition",
+          "worst_score": 3490.0
+        }
+      ],
+      "seed": 20260103
+    },
+    {
+      "profiles": [
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 942.0,
+          "cost": 33.0,
+          "profile": "step30",
+          "worst_mode": "per_core_partition",
+          "worst_score": 1132.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 544.0,
+          "cost": 77.0,
+          "profile": "step40_joint",
+          "worst_mode": "shared_hot_shift",
+          "worst_score": 544.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 3374.0,
+          "cost": 21.0,
+          "profile": "step40_pareto3",
+          "worst_mode": "per_core_partition",
+          "worst_score": 3536.0
+        }
+      ],
+      "seed": 20260104
+    },
+    {
+      "profiles": [
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 936.0,
+          "cost": 33.0,
+          "profile": "step30",
+          "worst_mode": "per_core_partition",
+          "worst_score": 1088.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 544.0,
+          "cost": 77.0,
+          "profile": "step40_joint",
+          "worst_mode": "shared_hot_shift",
+          "worst_score": 544.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 3390.0,
+          "cost": 21.0,
+          "profile": "step40_pareto3",
+          "worst_mode": "per_core_partition",
+          "worst_score": 3520.0
+        }
+      ],
+      "seed": 20260105
+    },
+    {
+      "profiles": [
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 918.0,
+          "cost": 33.0,
+          "profile": "step30",
+          "worst_mode": "per_core_partition",
+          "worst_score": 1084.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 544.0,
+          "cost": 77.0,
+          "profile": "step40_joint",
+          "worst_mode": "shared_hot_shift",
+          "worst_score": 544.0
+        },
+        {
+          "best_mode": "shared_hot_shift",
+          "best_score": 3386.0,
+          "cost": 21.0,
+          "profile": "step40_pareto3",
+          "worst_mode": "per_core_partition",
+          "worst_score": 3512.0
+        }
+      ],
+      "seed": 20260106
+    }
+  ],
+  "profiles": [
+    {
+      "avg_rank": 1.0,
+      "n_seeds": 5,
+      "profile": "step40_joint",
+      "win_rate_vs_ref": 1.0,
+      "wins_vs_ref": 5,
+      "worst_score_max": 544.0,
+      "worst_score_mean": 544.0,
+      "worst_score_min": 544.0,
+      "worst_score_std": 0.0
+    },
+    {
+      "avg_rank": 2.0,
+      "n_seeds": 5,
+      "profile": "step30",
+      "win_rate_vs_ref": null,
+      "wins_vs_ref": null,
+      "worst_score_max": 1132.0,
+      "worst_score_mean": 1090.4,
+      "worst_score_min": 1042.0,
+      "worst_score_std": 33.027261
+    },
+    {
+      "avg_rank": 3.0,
+      "n_seeds": 5,
+      "profile": "step40_pareto3",
+      "win_rate_vs_ref": 0.0,
+      "wins_vs_ref": 0,
+      "worst_score_max": 3536.0,
+      "worst_score_mean": 3516.4,
+      "worst_score_min": 3490.0,
+      "worst_score_std": 17.1114
+    }
+  ],
+  "ref_profile": "step30",
+  "seeds": [
+    20260102,
+    20260103,
+    20260104,
+    20260105,
+    20260106
+  ],
+  "weights": {
+    "w_cycle": 1.0,
+    "w_replace": 2.0,
+    "w_stall": 10.0
+  },
+  "workloads": [
+    {
+      "global_share_p": 0.1,
+      "mode": "shared_hot_shift"
+    },
+    {
+      "global_share_p": 0.1,
+      "mode": "per_core_partition"
+    }
+  ]
+}

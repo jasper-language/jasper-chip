@@ -1,0 +1,16 @@
+Category,Item,Status,Tests
+Arbitration,ce_only,PASS,1
+Arbitration,ce_beats_mre,PASS,1
+Arbitration,mre_beats_sweep,PASS,1
+Arbitration,sweep_beats_scan,PASS,1
+Arbitration,scan_alone,PASS,1
+Arbitration,backpressure_holds_all,PASS,1
+Arbitration,held_valid_after_drain,PASS,1
+Region,scan_shared,PASS,1
+Region,scan_then_sweep,PASS,1
+Region,scan_then_rebuild,PASS,1
+Region,scan_then_compact,PASS,1
+Region,diff_region_parallel,PASS,1
+Region,stale_epoch_no_lock,PASS,1
+4engine,16_mixed,PARTIAL,1
+4engine,no_missing_16,PARTIAL,1

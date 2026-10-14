@@ -1,0 +1,10 @@
+Category,Test,Status,Counters,Tests
+CounterSingle,scan_counters,PASS,cmd_accepted=1 comp_accepted=1 scan_cmd_accepted=1,1
+CounterFourEngine,per_engine_counters,PASS,cmd_acc=4 comp_acc=4 scan/sw/reb/ce_cmd=1 each,1
+CounterMemReqRsp,mem_req_rsp_match,PASS,mem_req=mem_rsp=4,1
+CounterCmdBp,cmd_accepted_normal,PASS,cmd_acc=2,1
+CounterCompBp,comp_accepted_normal,PASS,comp_acc=2,1
+CounterOutBlock,outstanding_block_wired,PASS,wired=1,1
+CounterStaleEpoch,stale_epoch_reject,PASS,stale_reject>=1 mem_req=0,1
+CounterUnsupported,unsupported_reject,PASS,unsupp_reject>=1 mem_req=0,1
+CounterCountMode,counting_mode_zero_mem,PASS,mem_req=0 mem_rsp=0 cmd=1 comp=1,1

@@ -1,0 +1,81 @@
+{
+  "profiles": [
+    {
+      "cost": 77.0,
+      "per_mode": [
+        {
+          "cycle": 544,
+          "score": 544.0,
+          "stall_in": 0,
+          "sweep_replace": 0,
+          "workload_mode": "shared_hot_shift"
+        },
+        {
+          "cycle": 544,
+          "score": 544.0,
+          "stall_in": 0,
+          "sweep_replace": 0,
+          "workload_mode": "per_core_partition"
+        }
+      ],
+      "profile": "step40_joint",
+      "scan": {
+        "batch_size": 2,
+        "cardset_size": 8,
+        "consume_every": 2,
+        "fifo_depth": 1
+      },
+      "sweep": {
+        "index_mode": 0,
+        "sets": 16,
+        "ways": 4
+      },
+      "worst_mode": "shared_hot_shift",
+      "worst_score": 544.0
+    },
+    {
+      "cost": 33.0,
+      "per_mode": [
+        {
+          "cycle": 544,
+          "score": 910.0,
+          "stall_in": 0,
+          "sweep_replace": 183,
+          "workload_mode": "shared_hot_shift"
+        },
+        {
+          "cycle": 544,
+          "score": 1042.0,
+          "stall_in": 0,
+          "sweep_replace": 249,
+          "workload_mode": "per_core_partition"
+        }
+      ],
+      "profile": "step30",
+      "scan": {
+        "batch_size": 2,
+        "cardset_size": 8,
+        "consume_every": 2,
+        "fifo_depth": 1
+      },
+      "sweep": {
+        "index_mode": 1,
+        "sets": 8,
+        "ways": 2
+      },
+      "worst_mode": "per_core_partition",
+      "worst_score": 1042.0
+    }
+  ],
+  "ref_profile": "step30",
+  "workloads": [
+    {
+      "global_share_p": 0.1,
+      "mode": "shared_hot_shift"
+    },
+    {
+      "global_share_p": 0.1,
+      "mode": "per_core_partition"
+    }
+  ]
+}
